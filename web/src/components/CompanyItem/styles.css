@@ -1,0 +1,44 @@
+main {
+  flex: 1;
+  margin-top: 40px;
+}
+
+main ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  list-style: none;
+}
+
+@media (max-width: 750px) {
+  main ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+li.comp-info {
+  background: #3e3d3d;
+  border: solid 2px #54c9e2;
+  border-radius: 5px;
+
+  height: 150px;
+  width: 200px;
+  padding: 10px;
+
+  display: flex;
+}
+
+.comp-info .first-column {
+  color: #54c9e2;
+  margin-right: 20px;
+}
+
+.comp-info .second-column {
+  color: #a91ecc;
+}
+
+.comp-info .first-column div,
+.comp-info .second-column div {
+  margin-bottom: 20px;
+}
