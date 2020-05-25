@@ -8,6 +8,8 @@ const routes = Router();
 routes.post("/companies", CompanyController.store);
 routes.get("/companies", CompanyController.index);
 
+routes.delete("/companies/:id", CompanyController.delete);
+
 routes.get("/searchCompanies", SearchController.index);
 
 module.exports = routes;

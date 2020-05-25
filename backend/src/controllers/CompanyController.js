@@ -29,4 +29,9 @@ module.exports = {
 
     return res.json(company);
   },
+
+  async delete(req, res) {
+    await Company.findByIdAndDelete(req.params.id);
+    res.json({ message: "Deleted" });
+  },
 };
