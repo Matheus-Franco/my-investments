@@ -30,6 +30,21 @@ module.exports = {
     return res.json(company);
   },
 
+  async update(req, res) {
+    const { name, code, price, date, amount, sector } = req.body;
+
+    const company = await Company.where("_id", req.params.id).updateOne({
+      name,
+      code,
+      price,
+      date,
+      amount,
+      sector,
+    });
+
+    return res.json(company);
+  },
+
   async delete(req, res) {
     await Company.findByIdAndDelete(req.params.id);
     res.json({ message: "Deleted" });

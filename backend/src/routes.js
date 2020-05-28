@@ -9,6 +9,7 @@ routes.post("/companies", CompanyController.store);
 routes.get("/companies", CompanyController.index);
 
 routes.delete("/companies/:id", CompanyController.delete);
+routes.put("/companies/:id", CompanyController.update);
 
 routes.get("/searchCompanies", SearchController.index);
 
